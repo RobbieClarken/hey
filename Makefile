@@ -7,3 +7,8 @@ release:
 
 push:
 	gsutil cp bin/* gs://$(binary)-release
+
+image:
+	docker build -t hey .
+
+.PHONY: release push image
